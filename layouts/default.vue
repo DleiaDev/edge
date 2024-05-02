@@ -1,3 +1,7 @@
+<script setup lang="ts">
+//
+</script>
+
 <template>
   <div>
     <aside>Sidebar</aside>
@@ -9,5 +13,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
