@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxtjs/svg-sprite'],
   css: ['~/assets/scss/main.scss'],
   vite: {
     css: {
@@ -17,3 +17,4 @@ export default defineNuxtConfig({
     classPrefix: 'theme--',
   },
 });
+
