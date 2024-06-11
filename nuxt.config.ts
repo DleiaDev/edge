@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxtjs/svg-sprite'],
   css: ['~/assets/scss/main.scss'],
+  components: [
+    {
+      path: '~/layouts',
+      prefix: 'Layout',
+    },
+    '~/components',
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -17,4 +24,3 @@ export default defineNuxtConfig({
     classPrefix: 'theme--',
   },
 });
-

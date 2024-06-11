@@ -1,12 +1,23 @@
 $primary--light: #1e7376;
+$bg--layout--light: #ffffff;
 $bg--light: #f8fafc;
 $bg--highlight--light: #f4f5f6;
-$bg--selected: #e8f1f1;
-$text--selected: $primary--light;
+$bg--selected--light: #e8f1f1;
+$text--selected--light: $primary--light;
+$border--light: #e8ecf1;
+$text--secondary--light: #667085;
+$text--primary--light: #101828;
 
 $themes: (
         light: (
           primary: $primary--light,
+          border: $border--light,
+          bg: $bg--light,
+          bg--layout: $bg--layout--light,
+          bg--selected: $bg--selected--light,
+          text--selected: $text--selected--light,
+          text--primary: $text--primary--light,
+          text--secondary: $text--secondary--light,
         ),
         dark: (
         ),

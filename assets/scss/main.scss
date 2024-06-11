@@ -1,9 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
 html {
-  font-family: 'Urbanist-Regular', sans-serif;
+  font-family: 'Urbanist', sans-serif;
+}
+body {
+  margin: 0;
+  @include themed() {
+    color: t('text--primary');
+  }
 }
 
 @font-face {
-  font-family: 'Urbanist-Regular';
+  font-family: 'Urbanist';
   src: url('/fonts/Urbanist-Regular.woff2') format('woff2');
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-Black.woff2') format('woff2');
+  font-weight: 900;
+}
