@@ -11,9 +11,8 @@ RUN npm install -g pnpm
 # Create directory where project code will be mounted
 RUN mkdir -p /nuxt
 
-# "node" user needs to have permissions in order to write node_modules folder, package-lock.json, etc.
-RUN chown -R node /nuxt
-RUN chgrp -R node /nuxt
+# "node" user needs to have permissions in order to write node_modules folder, pnpm-lock.json, etc.
+RUN chown -R node:node /nuxt
 
 # Copy entrypoint
 COPY --chown=node ./docker/dev/nuxt/entrypoint.sh /entrypoint.sh
