@@ -1,0 +1,16 @@
+services:
+  nuxt:
+    image: invest-nuxt
+    build:
+      context: .
+      dockerfile: ./docker/dev/nuxt/nuxt.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/nuxt
+    networks:
+      - main
+
+networks:
+  main:
+    driver: bridge
