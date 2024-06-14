@@ -1,25 +1,21 @@
 FROM python:alpine
 
+EXPOSE 8000
+
 ARG UID=1000
 ARG GID=1000
 
-# Install pip
-RUN pip install yfinance --upgrade --no-cache-dir
+# Install python libraries
+RUN pip install Django yfinance
 
 # Setup non root user
 RUN addgroup -g $GID yfinance && adduser -D --no-create-home -G yfinance -u $UID yfinance
-
-# Create a directory where yfinance code will be stored
-RUN mkdir -p /yfinance
-
-# Assign the directory to our user
-RUN chown -R yfinance:yfinance /yfinance
 
 # Switch user
 USER yfinance
 
 # cd
-WORKDIR yfinance
+WORKDIR /yfinanceserver
 
 # Entrypoint
-CMD python main.py
+CMD python manage.py runserver 0.0.0.0:8000
