@@ -2,7 +2,7 @@
 
 # Install dependencies
 if [ ! -d node_modules ]; then
-  pnpm install
+	pnpm install
 fi
 
 # Run nuxt server

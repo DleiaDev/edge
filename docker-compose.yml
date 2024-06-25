@@ -1,28 +1,10 @@
 services:
-  nuxt:
+  app:
     image: invest-nuxt
     build:
       context: .
-      dockerfile: ./docker/dev/nuxt/Dockerfile
+      dockerfile: ./docker/dev/Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - .:/nuxt
-    networks:
-      - main
-
-  yfinance:
-    image: invest-yfinance
-    build: 
-      context: .
-      dockerfile: ./docker/dev/yfinance/Dockerfile
-    ports:
-      - 8000:8000
-    volumes:
-      - ./yfinanceserver:/yfinanceserver
-    networks:
-      - main
-
-networks:
-  main:
-    driver: bridge
+      - .:/app
