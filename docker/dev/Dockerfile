@@ -9,6 +9,9 @@ RUN apk add nodejs npm
 # Install pnpm
 RUN npm i -g pnpm
 
+# Install yfinance
+RUN pip install yfinance
+
 # Setup non root user
 RUN addgroup -g $GID app && adduser -D -G app -u $UID app
 
