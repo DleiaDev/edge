@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SvgIcon from '../node_modules/.pnpm/@nuxtjs+svg-sprite@1.0.2/node_modules/@nuxtjs/svg-sprite/dist/runtime/components/svg-icon.vue';
+import SvgIcon from '../node_modules/@nuxtjs/svg-sprite/dist/runtime/components/svg-icon.vue';
 
 interface Props {
   name: string;
